@@ -1,9 +1,11 @@
-""" personas = {
+personas = {
     "Juan": 28,
     "María": 15,
     "Pedro": 14,
     "Ana": 16,
-    "Juan": 23,
+    # Nota: anteriormente había otra entrada para 'Juan' con edad 23.
+    # Python no permite claves duplicadas en dicts; la última sobrescribe a la anterior.
+    # Mantengo solo la entrada original ('Juan': 28).
     "Luis": 40,
     "Sofía": 17
 }
@@ -19,11 +21,12 @@ ordenados = dict(sorted(mayores_de_edad.items(), key=lambda item: item[1]))
 
 print("Personas mayores de edad ordenadas por edad:", ordenados)
 
+
 # Numero primo entre 1 y 100
 
 primo = []
 
-fot i in range(1, 101):
+for i in range(1, 101):
     es_primo = True
 
     for j in range(2, int(i**0.5) + 1):
@@ -31,7 +34,9 @@ fot i in range(1, 101):
             es_primo = False
             break
     if es_primo and i > 1:
-        primo.append(i) """
+        primo.append(i)
+
+print("\nNúmeros primos entre 1 y 100:", primo)
 
 
 num1 = 13
